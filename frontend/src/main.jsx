@@ -1,44 +1,14 @@
+// main.js
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { StyledEngineProvider } from "@mui/material/styles";
-import ReactDOM from "react-dom/client";
-import "./main.scss";
-import { AppProvider } from "./components/Context/AppContext";
+import { createRoot } from "react-dom/client";
 
-import Root from "./routes/Root";
-import MaxLengthProvider from "./context/MaxLengthContext";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import EstimationPage from "./pages/EstimationPage";
+import App from "./App";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "/",
-        element: <Login />,
-      },
-      {
-        path: "/home",
-        element: <Home />,
-      },
-      {
-        path: "/estimation",
-        element: <EstimationPage />,
-      },
-    ],
-  },
-]);
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
 
 root.render(
-  <StyledEngineProvider injectFirst>
-    <MaxLengthProvider>
-      <AppProvider>
-        <RouterProvider router={router} />
-      </AppProvider>
-    </MaxLengthProvider>
-  </StyledEngineProvider>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );

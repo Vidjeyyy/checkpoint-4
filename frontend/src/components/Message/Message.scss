@@ -1,0 +1,43 @@
+// Message.scss
+
+.mesmessages {
+    background-color: lightblue;
+    font-size: 20px;
+    color: black;
+    padding: 8px;
+    margin: 16px;
+    text-align: right;
+    margin-right: 50vw ;
+    border-radius: 30px;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .sesmessages {
+    background-color: lightgreen;
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    color: white;
+    padding: 8px;
+    margin: 16px;
+    text-align: left;
+    margin-left: 50vw ;
+    border-radius: 30px;
+    height: max-content;
+    width: max-content;
+  }
+
+  .but {
+  border-radius: 1px ;
+  border: none;
+  height: 20px;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  }
+  
